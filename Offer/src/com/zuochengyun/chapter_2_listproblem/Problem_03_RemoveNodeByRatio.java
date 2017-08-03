@@ -18,8 +18,10 @@ public class Problem_03_RemoveNodeByRatio {
 		if (head.next.next == null) {
 			return head.next;
 		}
+		//pre即中间结点
 		Node pre = head;
 		Node cur = head.next.next;
+		//每增加两个结点，中间结点指针+1,即往后挪一个位置
 		while (cur.next != null && cur.next.next != null) {
 			pre = pre.next;
 			cur = cur.next.next;

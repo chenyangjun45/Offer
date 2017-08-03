@@ -16,13 +16,17 @@ public class Problem_08_MaxTree {
 	}
 
 	public static Node getMaxTree(int[] arr) {
+		//复制array中的数
 		Node[] nArr = new Node[arr.length];
 		for (int i = 0; i != arr.length; i++) {
 			nArr[i] = new Node(arr[i]);
 		}
 		Stack<Node> stack = new Stack<Node>();
+		//左边第一个最大的结点
 		HashMap<Node, Node> lBigMap = new HashMap<Node, Node>();
+		//右边最大的第一个结点
 		HashMap<Node, Node> rBigMap = new HashMap<Node, Node>();
+		//找到左边第一个比nArr[i]大的
 		for (int i = 0; i != nArr.length; i++) {
 			Node curNode = nArr[i];
 			while ((!stack.isEmpty()) && stack.peek().value < curNode.value) {
@@ -43,6 +47,7 @@ public class Problem_08_MaxTree {
 		while (!stack.isEmpty()) {
 			popStackSetMap(stack, rBigMap);
 		}
+		//根据结果构建二叉树
 		Node head = null;
 		for (int i = 0; i != nArr.length; i++) {
 			Node curNode = nArr[i];

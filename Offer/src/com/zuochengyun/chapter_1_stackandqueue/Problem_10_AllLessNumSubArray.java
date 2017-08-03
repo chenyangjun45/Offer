@@ -14,23 +14,33 @@ public class Problem_10_AllLessNumSubArray {
 		int j = 0;
 		int res = 0;
 		while (i < arr.length) {
+			//找j
 			while (j < arr.length) {
+				//先是当做栈来用，通过栈找左边比它大的数
+				//不断向右遍历，则不断找到的是目前序列中最大的数
+				//队尾大于当前值，弹出队尾
 				while (!qmin.isEmpty() && arr[qmin.peekLast()] >= arr[j]) {
 					qmin.pollLast();
 				}
+				//队列为空，直接加入，保证队头是最小
 				qmin.addLast(j);
+				//队尾小于当前值，弹出队尾
 				while (!qmax.isEmpty() && arr[qmax.peekLast()] <= arr[j]) {
 					qmax.pollLast();
 				}
+				//队列为空，直接加入，保证队头是最大
 				qmax.addLast(j);
+				//最大值与最小值已经找到
 				if (arr[qmax.getFirst()] - arr[qmin.getFirst()] > num) {
 					break;
 				}
 				j++;
 			}
+			//当前窗口的第一个，在下一次循环中不应该存在，过期了
 			if (qmin.peekFirst() == i) {
 				qmin.pollFirst();
 			}
+			//当前窗口的第一个，在下一次循环中不应该存在，过期了
 			if (qmax.peekFirst() == i) {
 				qmax.pollFirst();
 			}

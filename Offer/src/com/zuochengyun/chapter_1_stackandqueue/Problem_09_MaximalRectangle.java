@@ -18,7 +18,7 @@ public class Problem_09_MaximalRectangle {
 		}
 		return maxArea;
 	}
-
+	//求直方图的最大面积
 	public static int maxRecFromBottom(int[] height) {
 		if (height == null || height.length == 0) {
 			return 0;

@@ -3,7 +3,8 @@ package com.zuochengyun.chapter_1_stackandqueue;
 import java.util.Stack;
 
 public class Problem_05_StackSortStack {
-
+	//这是插入排序的思想！！
+	//help始终是有序的
 	public static void sortStackByStack(Stack<Integer> stack) {
 		Stack<Integer> help = new Stack<Integer>();
 		while (!stack.isEmpty()) {
