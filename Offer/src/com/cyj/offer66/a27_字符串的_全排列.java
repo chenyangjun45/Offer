@@ -5,7 +5,7 @@ import java.util.Collections;
 import java.util.HashSet;
 import java.util.Iterator;
 
-public class a27_字符串的排列 {
+public class a27_字符串的_全排列 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -43,6 +43,7 @@ public class a27_字符串的排列 {
         for (int i = k; i < str.length; i++) {
             swap(str, i, k);
             fun(re, str, k + 1);
+            //注意要交换回来，要恢复状态
             swap(str, i, k);
         }
     }

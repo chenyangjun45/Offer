@@ -24,6 +24,9 @@ public class 双向队列 {
         while(!queueA.isEmpty()){
         	System.out.println(queueA.poll());
         }
+        //queueA.addLast(e);//加在队尾
+        //queueA.peek();//获得队头，但是不出队
+        
 	}
 
 }

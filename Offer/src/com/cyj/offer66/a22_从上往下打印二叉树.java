@@ -32,9 +32,11 @@ public class a22_从上往下打印二叉树 {
         	//父节点出队，左右结点进队
             TreeNode  treeNode  =  queue.poll();
             if  (treeNode.left  !=  null)  {
+            	//左进队
                     queue.offer(treeNode.left);
             }
             if  (treeNode.right  !=  null)  {
+            	//右进队
                     queue.offer(treeNode.right);
             }
             list.add(treeNode.val);

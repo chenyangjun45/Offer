@@ -3,7 +3,7 @@ package com.cyj.offer66;
 import java.util.ArrayList;
 import java.util.Iterator;
 
-public class a24_二叉树中和为某一值得路径_深度遍历_用了回溯 {
+public class a24_二叉树中和为某一值得路径_深度遍历_递归返回时改回状态 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -36,6 +36,7 @@ public class a24_二叉树中和为某一值得路径_深度遍历_用了回溯 
         FindPathCore(root,target,curResult,result,curSum);
         return result;
     }
+    //!!!!!!!!如果修改了递归函数中的参数，一定要在返回之前修改回来。
     private static void FindPathCore(TreeNode root,int target,ArrayList<Integer> curResult,ArrayList<ArrayList<Integer>> result,int curSum){
         if(root==null){
             return;
@@ -49,6 +50,7 @@ public class a24_二叉树中和为某一值得路径_深度遍历_用了回溯 
                 curResult.add(root.val);
                 //是叶子结点就输出结果
                 result.add(new ArrayList<Integer>(curResult));
+                //返回之前修改curResult
                 //路径中取出该叶子节点
                 curResult.remove(curResult.size()-1);
             }
@@ -57,6 +59,9 @@ public class a24_二叉树中和为某一值得路径_深度遍历_用了回溯 
             curSum-=root.val;
             return;
         }
+        //将当前结点加入路径中
+        //因为实在递归的过程中不断进行curResult的修改
+        //所以在返回之前，修改的都要改回来
         curResult.add(root.val);
         FindPathCore(root.left,target,curResult,result,curSum);
         FindPathCore(root.right,target,curResult,result,curSum);
