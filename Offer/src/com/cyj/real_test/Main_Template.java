@@ -2,7 +2,7 @@ package com.cyj.real_test;
 
 import java.util.Scanner;
 
-public class Main3 {
+public class Main_Template {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
