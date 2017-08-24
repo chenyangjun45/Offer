@@ -1,4 +1,4 @@
-package com.cyj.source_on_data_structure;
+package com.cyj.data_structure;
 import java.util.ArrayList;  
 
 public class KMPTest {  
