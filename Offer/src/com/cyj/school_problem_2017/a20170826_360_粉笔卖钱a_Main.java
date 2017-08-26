@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Scanner;
 
-public class a20170826_360_交换两次数字_Main {
+public class a20170826_360_粉笔卖钱a_Main {
 /*
 5 5
 1 2 3 3
