@@ -46,7 +46,7 @@ public class Main {
 	public boolean rule3(UnilateralLine l1,UnilateralLine l2,UnilateralLine l3){
 		if(l1.getSCen().equals(l2.getECen())
 				&&l3.getSCen().equals(l1.getECen())
-				&&l2.getSPro().equals(l3.getSPro())){
+				 &&l2.getSPro().equals(l3.getSPro())){
 			return true;
 		}
 		return false;
