@@ -9,7 +9,7 @@ public class a33_把数组排列成最小的数 {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		//int []numbers={3,32,321};
-		int []numbers={};
+		int []numbers={3,32,321};
 		PrintMinNumber(numbers);
 		
 	}
