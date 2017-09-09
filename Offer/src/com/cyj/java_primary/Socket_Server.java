@@ -4,11 +4,11 @@ import java.io.IOException;
 import java.net.ServerSocket;
 import java.net.Socket;
 
-public class a4_07_2_Socket_Server {
+public class Socket_Server {
 	 private int port = 1122;
 	 private ServerSocket serverSocket;
 
-	 public a4_07_2_Socket_Server() throws Exception{
+	 public Socket_Server() throws Exception{
 	  serverSocket = new ServerSocket(port,3);
 	  System.out.println("服务器启动!");
 	 }
@@ -34,7 +34,7 @@ public class a4_07_2_Socket_Server {
 	 }
 
 	public static void main(String[] args) throws Exception{
-		a4_07_2_Socket_Server server = new a4_07_2_Socket_Server();
+		Socket_Server server = new Socket_Server();
 		  Thread.sleep(60000*10);
 		  server.service();
 	}

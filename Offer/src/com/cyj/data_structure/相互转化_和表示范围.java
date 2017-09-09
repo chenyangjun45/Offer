@@ -59,6 +59,7 @@ public class 相互转化_和表示范围 {
 		
 		//如何将 String 转换成 char ?
 		char[] ca="123".toCharArray();
+		
 		//如何将char转换成String?
 		String s21 = new String(ca);
 		String s=ca.toString();      //任何类型都可以采用toString()转换成String类型

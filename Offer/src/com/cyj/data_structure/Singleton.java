@@ -1,4 +1,4 @@
-package com.cyj.java_primary;
+package com.cyj.data_structure;
 
 public class Singleton {
 	private static Singleton instance = null;

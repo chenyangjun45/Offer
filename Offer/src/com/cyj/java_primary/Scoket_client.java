@@ -4,7 +4,7 @@ import java.io.IOException;
 import java.net.Socket;
 import java.net.UnknownHostException;
 
-public class a4_07_2_Scoket_client {
+public class Scoket_client {
 	public static void main(String []args) throws UnknownHostException, IOException, InterruptedException{
 		 final int length = 100;
 		  String host = "localhost";

@@ -17,7 +17,7 @@ class Test {
 		
 	}
 }
-public class a1_IntCompare_实现函数指针 {
+public class IntCompare_实现函数指针 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub

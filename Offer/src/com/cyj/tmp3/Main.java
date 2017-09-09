@@ -1,5 +1,6 @@
 package com.cyj.tmp3;
 
+import java.util.Date;
 import java.util.Scanner;
 
 public class Main {
@@ -9,4 +10,9 @@ public class Main {
 		Scanner sc = new Scanner(System.in);
 	}
 	
+}
+class Fee{
+	private Date start;
+	private Date end;
+	private int expense;
 }

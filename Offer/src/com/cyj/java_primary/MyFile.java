@@ -2,7 +2,7 @@ package com.cyj.java_primary;
 
 import java.io.File;
 
-public class a4_07_1_MyFile {
+public class MyFile {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub

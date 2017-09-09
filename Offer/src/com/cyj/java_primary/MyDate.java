@@ -1,6 +1,6 @@
-package com.cyj.tmp4;
+package com.cyj.java_primary;
 
-public class Main {
+public class MyDate {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
