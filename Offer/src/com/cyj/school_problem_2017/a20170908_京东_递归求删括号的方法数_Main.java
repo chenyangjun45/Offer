@@ -3,7 +3,7 @@ package com.cyj.school_problem_2017;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class a2017_9_8_京东_递归求删括号的方法数_Main {
+public class a20170908_京东_递归求删括号的方法数_Main {
 /*
  * aa
 (((())))
