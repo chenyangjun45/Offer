@@ -13,7 +13,7 @@ public class DateGenerate {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-
+		System.out.println(getWeek("2017-09-09"));
 	}
 	  /**
 	   * 获取现在时间
@@ -419,9 +419,10 @@ public class DateGenerate {
 	    Date date = DateGenerate.strToDate(sdate);
 	    Calendar c = Calendar.getInstance();
 	    c.setTime(date);
-	    // int hour=c.get(Calendar.DAY_OF_WEEK);
-	    // hour中存的就是星期几了，其范围 1~7
-	    // 1=星期日 7=星期六，其他类推
+	     int hour=c.get(Calendar.DAY_OF_WEEK);
+//	     hour中存的就是星期几了，其范围 1~7
+//	     1=星期日 7=星期六，其他类推
+	     //下面一行返回的是星期一，星期二。。。
 	    return new SimpleDateFormat("EEEE").format(c.getTime());
 	  }
 	 

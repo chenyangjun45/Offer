@@ -38,6 +38,11 @@ public class 遍历_Map {
 	      for (String v : map.values()) {
 	       System.out.println("value= " + v);
 	      }
+	      
+	      //基本操作
+	      if(map.containsKey("1")){
+	    	  System.out.println(map.get("1"));
+	      }
 	}
 
 }

@@ -18,7 +18,7 @@ output
 9 0
 */
 //自己写了一个类，用了Array中的sort排序
-public class a8_22_今日头条 {
+public class a20170822_今日头条 {
 
 	public static void solution(Point[] points, int n) {
 		Arrays.sort(points, new MyComparator());

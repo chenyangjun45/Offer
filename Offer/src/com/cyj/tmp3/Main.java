@@ -1,262 +1,135 @@
 package com.cyj.tmp3;
 
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.HashMap;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.Scanner;
 
 public class Main {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws IOException {
 		// TODO Auto-generated method stub
 		//Scanner sc = new Scanner(System.in);
-		Rule2 rule = new Rule2();
-		rule.setRule();
-		System.out.println(rule.getFee1().getStart());
-		System.out.println(rule.getFee1().getEnd());
-		System.out.println(rule.getFee1().getExpense());
-		System.out.println(rule.getFee2().getStart());
-		System.out.println(rule.getFee2().getEnd());
-		System.out.println(rule.getFee2().getExpense());
-		System.out.println(rule.getFee3().getStart());
-		System.out.println(rule.getFee3().getEnd());
-		System.out.println(rule.getFee3().getExpense());
-//		System.out.println(rule.getFee4().getStart());
-//		System.out.println(rule.getFee4().getEnd());
-//		System.out.println(rule.getFee4().getExpense());
-		
-	}
-	
-}
-class Fee{
-	private Date start;
-	private Date end;
-	private int expense;
-	
-	public Fee() {
-		super();
-	}
-	public Fee(Date start, Date end, int expense) {
-		super();
-		this.start = start;
-		this.end = end;
-		this.expense = expense;
-	}
-	public Date getStart() {
-		return start;
-	}
-	public void setStart(Date start) {
-		this.start = start;
-	}
-	public Date getEnd() {
-		return end;
-	}
-	public void setEnd(Date end) {
-		this.end = end;
-	}
-	public int getExpense() {
-		return expense;
-	}
-	public void setExpense(int expense) {
-		this.expense = expense;
-	}
-}
-class Rule1{
-	//"yyyy-MM-dd HH:mm:ss"
-	//HH是24小时制
-	private Fee fee1 = new Fee();
-	private Fee fee2 = new Fee();
-	private Fee fee3 = new Fee();
-	private Fee fee4 = new Fee();
-	
-	public Fee getFee1() {
-		return fee1;
-	}
+		BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
 
-	public void setFee1(Fee fee1) {
-		this.fee1 = fee1;
-	}
-
-	public Fee getFee2() {
-		return fee2;
-	}
-
-	public void setFee2(Fee fee2) {
-		this.fee2 = fee2;
-	}
-
-	public Fee getFee3() {
-		return fee3;
-	}
-
-	public void setFee3(Fee fee3) {
-		this.fee3 = fee3;
-	}
-
-	public Fee getFee4() {
-		return fee4;
-	}
-
-	public void setFee4(Fee fee4) {
-		this.fee4 = fee4;
-	}
-	
-	//初始化费用信息
-	public void setRule(){
-		try {
-			SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-			//时间段1
-			String startTime1 = "2017-09-09 9:00:00";
-			String endTime1 = "2017-09-09 12:00:00";
-			int exp1 = 30;
-			Date start1 = sdf.parse(startTime1);
-			Date end1 = sdf.parse(endTime1);
-			this.setFee1(new Fee(start1,end1,exp1));
-			//时间段2
-			String startTime2 = "2017-09-09 12:00:00";
-			String endTime2 = "2017-09-09 18:00:00";
-			int exp2 = 50;
-			Date start2 = sdf.parse(startTime2);
-			Date end2 = sdf.parse(endTime2);
-			this.setFee2(new Fee(start2,end2,exp2));
-			//时间段3
-			String startTime3 = "2017-09-09 18:00:00";
-			String endTime3 = "2017-09-09 20:00:00";
-			int exp3 = 80;
-			Date start3 = sdf.parse(startTime3);
-			Date end3 = sdf.parse(endTime3);
-			this.setFee3(new Fee(start3,end3,exp3));
-			//时间段4
-			String startTime4 = "2017-09-09 20:00:00";
-			String endTime4 = "2017-09-09 22:00:00";
-			int exp4 = 60;
-			Date start4 = sdf.parse(startTime4);
-			Date end4 = sdf.parse(endTime4);
-			this.setFee4(new Fee(start4,end4,exp4));
-		} catch (ParseException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} 
-	}
-}
-class Rule2{
-	private Fee fee1;
-	private Fee fee2;
-	private Fee fee3;
-	public Fee getFee1() {
-		return fee1;
-	}
-	public void setFee1(Fee fee1) {
-		this.fee1 = fee1;
-	}
-	public Fee getFee2() {
-		return fee2;
-	}
-	public void setFee2(Fee fee2) {
-		this.fee2 = fee2;
-	}
-	public Fee getFee3() {
-		return fee3;
-	}
-	public void setFee3(Fee fee3) {
-		this.fee3 = fee3;
-	}
-	//初始化费用信息
-	public void setRule(){
-		try {
-			SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-			//时间段1
-			String startTime1 = "2017-09-09 9:00:00";
-			String endTime1 = "2017-09-09 12:00:00";
-			int exp1 = 40;
-			Date start1 = sdf.parse(startTime1);
-			Date end1 = sdf.parse(endTime1);
-			this.setFee1(new Fee(start1,end1,exp1));
-			//时间段2
-			String startTime2 = "2017-09-09 12:00:00";
-			String endTime2 = "2017-09-09 18:00:00";
-			int exp2 = 50;
-			Date start2 = sdf.parse(startTime2);
-			Date end2 = sdf.parse(endTime2);
-			this.setFee2(new Fee(start2,end2,exp2));
-			//时间段3
-			String startTime3 = "2017-09-09 18:00:00";
-			String endTime3 = "2017-09-09 22:00:00";
-			int exp3 = 60;
-			Date start3 = sdf.parse(startTime3);
-			Date end3 = sdf.parse(endTime3);
-			this.setFee3(new Fee(start3,end3,exp3));
-		} catch (ParseException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} 
-	}
-}
-class Order{
-	private String userId;
-	private Date startReserve;//预定开始时间
-	private Date endReserve;//预定开始时间
-	private boolean cancle;
-	public String getUserId() {
-		return userId;
-	}
-	public void setUserId(String userId) {
-		this.userId = userId;
-	}
-	public Date getStartReserve() {
-		return startReserve;
-	}
-	public void setStartReserve(Date startReserve) {
-		this.startReserve = startReserve;
-	}
-	public Date getEndReserve() {
-		return endReserve;
-	}
-	public void setEndReserve(Date endReserve) {
-		this.endReserve = endReserve;
-	}
-	public boolean isCancle() {
-		return cancle;
-	}
-	public void setCancle(boolean cancle) {
-		this.cancle = cancle;
-	}
-}
-//某天的订单列表和每个小时时间段的占用情况
-class OrderDay{
-	//用来记录某一天的预定情况，所有订单都在里面，包括预定和取消
-	public ArrayList<Order> orderList = new ArrayList<Order>();
-	//用来记录每个小时是否被预定，即24个小时，第一个字段Integer表示24小时制的时间，第二个字段表示是否被预定
-	public HashMap<Integer,Boolean> orderMap = new HashMap<Integer,Boolean>();
-	public void PutAnOrderOrCancle(Order order){
-		if(order.isCancle()==true){//如果是取消订单
-			//首先加入订单
-			//然后更改预定状态hash
-		}
-		else{//如果是预定
-			//先检查是否冲突
-			//如果冲突
-			
-			//如果不冲突
-			
+		Stadium stA = new Stadium();
+		Stadium stB = new Stadium();
+		Stadium stC = new Stadium();
+		Stadium stD = new Stadium();
+		while(true){
+			String str = bf.readLine();
+			if(!(str.length()==0)){//不为空行，则是订单
+				System.out.println(str);
+				if(!checkOrder(str)){//如果输入不合法
+					System.out.println("Error: the booking is invalid!");
+					continue;
+				}
+				else{//如果合法
+					DateUtils dt = new DateUtils();
+					String []strArr = str.split(" ");
+					String []times = strArr[2].split("~");
+					String start = strArr[1]+" "+times[0];
+					String end = strArr[1]+" "+times[1];
+					boolean cancle=false;
+					if(strArr.length==5){//判断是否是取消订单
+						if(strArr[4].equals("C")){
+							cancle=true;
+						}
+						else{
+							System.out.println("Error: the booking is invalid!");
+							continue;
+						}
+					}
+					Order order = new Order(strArr[0],dt.strToDateLong(start),dt.strToDateLong(end),cancle);
+					//order.PrintOrder();
+					//1,可以预定或删除
+					//2,不能预定，因为冲突
+					//3,不能取消，因为冲突
+					switch(strArr[3]){
+					case "A":
+						//System.out.println("A");
+						int bl = stA.putAnOrderOrCancle(strArr[1],order);
+						printResult(bl);
+						break;
+					case "B":
+						int bl1 = stB.putAnOrderOrCancle(strArr[1],order);
+						printResult(bl1);
+						break;
+					case "C":
+						int bl2 = stC.putAnOrderOrCancle(strArr[1],order);
+						printResult(bl2);
+						break;
+					case "D":
+						int bl3 = stD.putAnOrderOrCancle(strArr[1],order);
+						printResult(bl3);
+						break;
+					}//switch
+					
+				}//if(!checkOrder(str)){}输入是否合法
+			}//输入不为""
+			else{
+				//System.out.println("空行");
+				//开始计算所有盈利。
+				int allSum = 0;
+				System.out.println("收入汇总");
+				System.out.println("---");
+				System.out.println("场地:A");
+				stA.getAllProfit();
+				stA.printAllFee();
+				System.out.println("小计："+(int)(stA.sum)+"元\n");
+				System.out.println("场地:B");
+				stB.getAllProfit();
+				stB.printAllFee();
+				System.out.println("小计："+(int)(stB.sum)+"元\n");
+				System.out.println("场地:C");
+				stC.getAllProfit();
+				stC.printAllFee();
+				System.out.println("小计："+(int)(stC.sum)+"元\n");
+				System.out.println("场地:D");
+				stD.getAllProfit();
+				stD.printAllFee();
+				System.out.println("小计："+(int)(stD.sum)+"元");
+				allSum = (int)(stA.sum)+(int)(stB.sum)+(int)(stC.sum)+(int)(stD.sum);
+				System.out.println("---");
+				System.out.println("总计："+allSum+"元\n");
+				break;
+			}
 		}
 	}
-	public int GetProfit(){
-		int sum=0;
-		//遍历订单，如果有取消预定，则计算违约金
-		//然后遍历HashMap直接累加每个小时的盈利即可
-		return 0;
+	//下面的函数主要检测输入是否合法
+	public static boolean checkOrder(String order){
+		String strArr[]= order.split(" ");
+		//按空格分割，少于4个则输入不合法
+		if(strArr.length<4){
+			return false;
+		}
+		String time = strArr[2];
+		String timeArr[] = time.split("~");//按~分割得到开始时间和结束时间
+		//检查是否为整点
+		DateUtils dt = new DateUtils();
+		if(dt.ifOnTheHour(timeArr[0])&&dt.ifOnTheHour(timeArr[1])){
+			//起始时间要比结束时间小，且不能相等
+			if(dt.ifTimeOneIsSmall(timeArr[0], timeArr[1])){
+				return true;
+			}
+			else{
+				return false;
+			}
+		}
+		else{
+			return false;
+		}
+	}
+	public static void printResult(int i){
+		if(i==1){
+			System.out.println("Success: the booking is accepted!");
+		}
+		else if(i==2){
+			System.out.println("Error: the booking conflicts with existing bookings!");
+		}
+		else if(i==3){
+			System.out.println("Error: the booking being cancelled does not exist!");
+		}
 	}
 }
-//每个场馆的预定情况
-class  Stadium{
-	//HashMap前一个字段String为日志的"yyyy-MM-dd",后一个字段OrderDay为这一天的订单情况
-	public HashMap<String,OrderDay> orderMap = new HashMap<String,OrderDay>();
-	//获取所有盈利
-	public int getAllProfit(){
-		int sum=0;
-		//遍历所有日期的订单，计算盈利总和
-		return 0;
-	}
-}
+
