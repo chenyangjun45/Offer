@@ -3,7 +3,7 @@ package com.cyj.school_problem_2017;
 
 
 import java.util.*;
-public class a20170908_搜狗_圆上两点最远距离_Main {
+public class a20170908_搜狗_圆上两点最远距离_暴力_Main {
 
 	public static void main(String[] args)
 	{

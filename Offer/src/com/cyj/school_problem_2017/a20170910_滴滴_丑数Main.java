@@ -1,42 +1,20 @@
-package com.cyj.offer66;
+package com.cyj.school_problem_2017;
 
-public class a34_丑数 {
+import java.util.Scanner;
+
+public class a20170910_滴滴_丑数Main {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		a34_丑数 test = new a34_丑数();
-		int x = test.GetUglyNumber_Solution2(15);
-		System.out.println(x);
+		Scanner sc = new Scanner(System.in);
+		while(sc.hasNext()){
+			int num = sc.nextInt();
+			int x = GetUglyNumber(num);
+			System.out.println(x);
+		}
 	}
-    public int GetUglyNumber_Solution(int index) {
-        if(index<=0){
-            return 0;
-        }
-        int uglyCount=0;
-        int num=0;
-        while(uglyCount<index){
-            ++num;
-            if(isUglyNumber(num)){
-                ++uglyCount;
-            }
-        }
-        return num;
-    }
-    private boolean isUglyNumber(int num){
-       
-        while(num%2==0){
-            num=num/2;
-        }
-        while(num%3==0){
-            num/=3;
-        }
-        while(num%5==0){
-            num/=5;
-        }
-        return (num==1)?true:false;
-    }
     //用空间换时间的方法
-    public int GetUglyNumber_Solution2(int index) {
+    public static int  GetUglyNumber(int index) {
         if(index<=0){
             return 0;
         }
@@ -81,7 +59,7 @@ public class a34_丑数 {
         return uglyArr[nextUgly-1];
     }
     //求三个数的最小值的Min函数
-    private int Min(int num1,int num2,int num3){
+    private static int Min(int num1,int num2,int num3){
         int min=num1<num2?num1:num2;
         return min<num3?min:num3;
     }

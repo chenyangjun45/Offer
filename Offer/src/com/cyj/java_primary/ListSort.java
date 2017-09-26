@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 
-public class LisrtSort {
+public class ListSort {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
